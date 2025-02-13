@@ -8,7 +8,8 @@ using std::string;
 using std::shared_ptr;
 using std::cerr;
 
-int main() {
+signed int main(void) 
+{
     try {
         // Создание пустого двусвязного списка строк
         LinkedList<string> lst;
