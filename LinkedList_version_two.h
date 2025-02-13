@@ -1,7 +1,7 @@
 #ifndef LINKEDLIST_VERSION_TWO_H
 #define LINKEDLIST_VERSION_TWO_H
 
-#include <iostream>
+#include <bits/stdc++.h>
 #include <memory>
 #include <cstring>
 #include "Exceptions.h"
