@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include "LinkedList_version_two.h"
 #include "Exceptions.h"
 
