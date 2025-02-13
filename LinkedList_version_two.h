@@ -1,6 +1,7 @@
 #ifndef LINKEDLIST_VERSION_TWO_H
 #define LINKEDLIST_VERSION_TWO_H
 
+
 #include <bits/stdc++.h>
 #include <memory>
 #include <cstring>
@@ -15,7 +16,7 @@ template <class T>
 class Object final 
 {
 public:
-    Object() = default;
+    Object()=default;
 
     explicit Object(T data)
     {
@@ -23,7 +24,7 @@ public:
         this->next = nullptr;
         this->prev =nullptr;
     }
-    T get_data(void) const {
+    T get_data(void)const {
         return data;
     }
     std::shared_ptr<Object<T>> get_next(void) const {
@@ -35,8 +36,8 @@ public:
 
 public:
     T data;
-    std::shared_ptr<Object<T>> next;
-    std::shared_ptr<Object<T>> prev;
+    std::shared_ptr<Object<T>>next;
+    std::shared_ptr<Object<T>>prev;
 };
 
 
@@ -50,11 +51,11 @@ public:
 
     explicit LinkedList()
     {
-        this->head = nullptr;
-        this->tail = nullptr;
+        this->head=nullptr;
+        this->tail=nullptr;
     }
     ~LinkedList(){
-        while(head != nullptr){
+        while(head!=nullptr){
             pop_front();
         }
     }
@@ -111,13 +112,13 @@ public:
         if (head == nullptr) 
             throw LinkedListEmptyError("Attempt to pop from an empty list.");
 
-        shared_obj_ptr ptr = head->next;
+        shared_obj_ptr ptr=head->next;
         if (ptr != NULL)
-            ptr->prev = nullptr;
+            ptr->prev=nullptr;
         else
-            tail = nullptr;
+            tail=nullptr;
 
-        head = ptr;
+        head =ptr;
 
         length--;
     }
